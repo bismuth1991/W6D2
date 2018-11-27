@@ -1,0 +1,22 @@
+/* PHASE 9: Forms */
+.form-group {
+  display: block;
+  float: left;
+  /* justify-content: space-around; */
+}
+
+.input {
+  /* display: flex;
+  flex-wrap: wrap; */
+  float: left;
+  background: blue;
+  width: 50%;
+}
+
+.post-title {
+  border: 1px solid green;
+}
+
+.post-body {
+  border: 1px solid gray;
+}
