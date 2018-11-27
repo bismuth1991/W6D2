@@ -1,0 +1,49 @@
+html, div, body, figure, figcaption, ul, li, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+
+
+.board {
+  margin-right: -20px;
+  list-style: none;
+  border: 5px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  background: gray;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+.box {
+  border: 5px solid black;
+  margin: 0;
+  /* box-sizing: border-box; */
+  height: 90px;
+  width: 90px;
+  text-align: center;
+}
+
+.box:hover {
+  background: yellow;
+  cursor: pointer;
+}
+
+.x {
+  background: white;
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.o {
+  background: white;
+  font-size: 80px;
+  line-height: 80px;
+}
