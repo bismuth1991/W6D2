@@ -3,7 +3,7 @@ class View {
     this.game = game;
     this.board = $rootEl;
     this.setupTowers();
-    this.render();
+    this.renderBoard();
   }
 
   setupTowers() {
@@ -24,9 +24,25 @@ class View {
     }
   }
 
-  render() {
+  renderTower(gameArr, tower_idx) {
+    const $tower = $("ul").eq(tower_idx);
+    gameArr.reverse().forEach( (size, idx) => {
+      let $disk = $tower.children().eq(idx);
+      swapClass($disk, size);
+    });
+  }
 
+  renderBoard() {
+    this.game.towers.forEach( (tower, idx) => {
+      this.renderTower(tower, idx);
+    });
   }
 }
+
+function swapClass($li, size) {
+  $li.removeClass().addClass(`disk-${size}`);
+}
+
+
 
 module.exports = View;
